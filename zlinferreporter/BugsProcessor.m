@@ -100,7 +100,7 @@
             
             NSString *typeFile = [projectDir stringByAppendingFormat:@"/%@.txt", type];
             if (count == 0) {
-                [code writeToFile:typeFile atomically:yearMask encoding:NSUTF8StringEncoding error:nil];
+                [code writeToFile:typeFile atomically:YES encoding:NSUTF8StringEncoding error:nil];
             } else {
                 NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:typeFile];
                 [fileHandle seekToEndOfFile];
